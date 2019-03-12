@@ -1,7 +1,7 @@
 const FRONTEND_DEV_URLS = [ 'http://localhost:3000' ];
 
 const FRONTEND_PROD_URLS = [
-    'https://react-pizza-builder-40b76.firebaseapp.com/'
+  'http://localhost:3000'
   ]; 
 
 module.exports = process.env.NODE_ENV === 'production'
