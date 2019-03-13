@@ -9,12 +9,6 @@ const postStripeCharge = res => (stripeErr, stripeRes) => {
 };
 
 const paymentApi = app => {
-    app.all('/', function(req, res, next) {
-        res.header("Access-Control-Allow-Origin", "*");
-        res.header("Access-Control-Allow-Headers", "X-Requested-With");
-        next()
-    });
-
     app.get('/', (req, res) => {
         res.send({ message: 'Hello Stripe checkout server!', timestamp: new Date().toISOString() });
     });
