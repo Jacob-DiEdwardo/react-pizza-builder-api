@@ -19,7 +19,7 @@ const configureServer = app => {
     res.setHeader('Access-Control-Allow-Headers', '*');
     next();
   });
-  app.use(cors(corsOptions()));
+  app.use(cors(corsOptions));
   app.use(bodyParser.json());
 }
 
