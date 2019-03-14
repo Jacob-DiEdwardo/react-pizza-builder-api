@@ -12,7 +12,7 @@ const corsOptions = {
 
 const configureServer = app => {
   
-  app.options('*', cors(corsOptions))
+  app.options('*', cors())
   app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', '*');
