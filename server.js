@@ -11,7 +11,7 @@ const corsOptions = {
 };
 
 const configureServer = app => {
-  app.use(bodyParser.json());
+  
   app.options('*', cors())
   app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -20,6 +20,7 @@ const configureServer = app => {
     next();
   });
   app.use(cors(corsOptions));
+  app.use(bodyParser.json());
 }
 
 module.exports = configureServer;
